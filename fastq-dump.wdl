@@ -4,7 +4,7 @@ workflow sra2fastq {
     input {
         String sample_id
         File sra_file
-        String docker_img = 'cr-cn-beijing.volces.com/popgenomics/sra-tools:latest'
+        String docker_img = 'cr-cn-beijing.volces.com/xxxx/sra-tools:latest' # 修改自己的镜像仓库地址
     }
 
     call fastq_dump {
