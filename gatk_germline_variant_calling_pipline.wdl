@@ -17,8 +17,8 @@ workflow wgs {
 
         Array[File] genome_indexes
 
-        String docker_img_germline_tools = 'cr-cn-beijing.volces.com/popgenomics/germline_tools:v3'
-        String docker_img_gatk4 = 'cr-cn-beijing.volces.com/popgenomics/gatk:4.3.0.0'
+        String docker_img_germline_tools = 'xxx/germline_tools:v3' # 修改自己的镜像仓库地址
+        String docker_img_gatk4 = 'xxx/gatk:4.3.0.0'# 修改自己的镜像仓库地址
 
         Int scatter_count
     }
