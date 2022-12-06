@@ -24,6 +24,6 @@ https://www.volcengine.com/docs/6420/77826
 ### 03 GATK_germline_variant_calling
 GATK 二级分析 ： <br>
 
-# wechat
+# 微信交流
 
 https://github.com/zhmaxc/Bio-OS/blob/main/20221206-213057.png
