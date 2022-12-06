@@ -18,7 +18,7 @@ https://www.volcengine.com/docs/6420
 - 详细使用文档：https://bytedance.feishu.cn/docx/VZysdeEzqoHquJxq0AEc9aP8nYf
 - 样本下载：
 - Ref 下载：
-### 02 Dastq-Dump
+### 02 Fastq-Dump
 预处理：SRA 文件转换成 Fastq <br>
 
 ### 03 GATK_germline_variant_calling
