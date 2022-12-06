@@ -9,8 +9,14 @@
 
 
 ## Demos
-### Cram2Bam
+### 01 Cram2Bam 
+预处理：Cram 文件转换成 Bam / Bai <br>
 
 - 详细使用文档：https://bytedance.feishu.cn/docx/VZysdeEzqoHquJxq0AEc9aP8nYf
 - 样本下载：
 - Ref 下载：
+### 02 Dastq-Dump
+预处理：SRA 文件转换成 Fastq <br>
+
+### 03 GATK_germline_variant_calling
+GATK 二级分析 ： <br>
