@@ -9,7 +9,7 @@
 
 ## 镜像配置
 考虑到速度问题，建议上传到火山引擎镜像仓库CR：
-https://www.volcengine.com/docs/6420
+https://www.volcengine.com/docs/6420/77826
 
 ## Demos
 ### 01 Cram2Bam 
