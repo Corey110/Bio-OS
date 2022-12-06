@@ -7,6 +7,9 @@
 - 产品文档：https://www.volcengine.com/docs/6971
 - 控制台地址：https://console.volcengine.com/bioos
 
+## 镜像配置
+考虑到速度问题，建议上传到火山引擎镜像仓库CR：
+https://www.volcengine.com/docs/6420
 
 ## Demos
 ### 01 Cram2Bam 
