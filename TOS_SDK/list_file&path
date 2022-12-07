@@ -2,7 +2,9 @@
 
 import tos
 import re
+import csv
 
+# AK/SK 从右上角头像-API访问密钥
 ak = ""
 sk = ""
 
@@ -28,13 +30,21 @@ while truncated:
 
     for iterm in result.contents:
         if re.search(suffix, iterm.key):
-            print("s3://bioos-wce6mpileig41ecp3t0fg/"+str(iterm.key)) # 输出文件路径 list
             sra_files_path.append(iterm.key)
       
     truncated = result.is_truncated
     marker = result.next_marker
+    
+with open('SRA.csv', 'w', encoding='UTF8', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(['SRA_id','SRA_path'])
+    data = []
 
-for i in suffix:
-    old_doc = "sample/sra/"
-    new_doc = ""
-    print(i.replace(old_doc,new_doc))  # 输出文件名 list
+    for iterm in sra_files_path:
+        sample_name = str(iterm.replace("sample/sra/",""))
+        sample_path = str("s3://bioos-wce6mpileig41ecp3t0fg/" + str(iterm))
+        sample = [sample_name ,sample_path]
+        print(sample)
+        data.append(sample)
+
+    writer.writerows(data)
