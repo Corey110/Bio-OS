@@ -1,0 +1,40 @@
+# volcengine TOS SDK 获取多样本名字 & 路径
+
+import tos
+import re
+
+ak = ""
+sk = ""
+
+endpoint = "tos-cn-beijing.volces.com"
+region = "cn-beijing"
+bucket_name = "bioos-wce6mpileig41ecp3t0fg" 
+
+# 创建 TosClientV2 对象，对桶和对象的操作都通过 TosClientV2 实现
+client = tos.TosClientV2(ak, sk, endpoint, region)
+
+# 列举指定桶下指定前缀的所有对象
+truncated = True
+marker = ''
+
+suffix = ".*\.sra"
+sra_files_path = []
+
+while truncated:
+    result = client.list_objects(bucket_name,marker)
+
+    # for iterm in result.contents:
+    # print('key={}, etag={}, hash_crc64_ecma={}, last_modified={}'.format(iterm.key, iterm.etag, iterm.hash_crc64_ecma, iterm.last_modified))
+
+    for iterm in result.contents:
+        if re.search(suffix, iterm.key):
+            print("s3://bioos-wce6mpileig41ecp3t0fg/"+str(iterm.key)) # 输出文件路径 list
+            sra_files_path.append(iterm.key)
+      
+    truncated = result.is_truncated
+    marker = result.next_marker
+
+for i in suffix:
+    old_doc = "sample/sra/"
+    new_doc = ""
+    print(i.replace(old_doc,new_doc))  # 输出文件名 list
