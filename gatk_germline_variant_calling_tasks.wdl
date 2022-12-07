@@ -71,8 +71,8 @@ task bwa_align {
 
         String sample_id
 
-        Int cpu = 64
-        Int memory = 128
+        Int cpu = 16
+        Int memory = 32
         Int disk_size_gb = ceil(6 * ceil(size(fastq1, 'GB')) /10) * 10 + 20
         String docker_img
     }
@@ -185,8 +185,8 @@ task split_intervals {
         Int scatter_count
         Array[File] genome_indexes
 
-        Int cpu = 1
-        Int memory = 2
+        Int cpu = 2
+        Int memory = 4
         Int disk_size_gb = 40
         String docker_img
     }
@@ -220,8 +220,8 @@ task haplotype_caller {
         File calling_region 
         
         # Resource
-        Int cpu = 1
-        Int memory = 2
+        Int cpu = 2
+        Int memory = 4
         Int disk_size_gb = ceil(1.5 * ceil(size(input_bam.left, 'GB')) /10) * 10 + 20
         String docker_img
 
