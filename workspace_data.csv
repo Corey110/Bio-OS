@@ -1,0 +1,4 @@
+﻿Key,Value
+RefDict,s3://bioos-transferpoc-wcdfp47leig407gqsonhg/data/reference/Homo_sapiens_assembly38.dict
+RefFasta,s3://bioos-transferpoc-wcdfp47leig407gqsonhg/data/reference/Homo_sapiens_assembly38.fasta
+RefFastaIndex,s3:/bioos-transferpoc-wcdfp47leig407gqsonhg/data/reference/Homo_sapiens_assembly38.fasta.fai
