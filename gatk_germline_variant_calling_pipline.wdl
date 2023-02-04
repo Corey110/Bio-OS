@@ -9,16 +9,16 @@ workflow wgs {
         File fastq1
         File fastq2
 
-        Boolean phred64 
-        Boolean fix_mgi_id
+        Boolean phred64 = false
+        Boolean fix_mgi_id = false
         String? adapter_sequence
         String? adapter_sequence_r2
         Int? reads_to_process 
 
         Array[File] genome_indexes
 
-        String docker_img_germline_tools # 修改自己的镜像仓库地址
-        String docker_img_gatk4 # 修改自己的镜像仓库地址
+        String docker_img_germline_tools = 'cr-cn-beijing.volces.com/popgenomics/germline_tools:v3'# 修改自己的镜像仓库地址
+        String docker_img_gatk4 = 'cr-cn-beijing.volces.com/popgenomics/gatk:4.3.0.0'# 修改自己的镜像仓库地址
 
         Int scatter_count
     }
